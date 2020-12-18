@@ -1,0 +1,43 @@
+drop table if exists book;
+create table book(
+ book_id int,
+ name varchar(20),
+ writer varchar(20),
+ price decimal(5,2),
+ kind varchar(20)
+);
+
+create table teacher(
+ teacher_id int,
+ name varchar(20),
+ age int,
+ height int,
+ weight int,
+ sex bit(1),
+ educate varchar(50),
+ birthday int,
+ idnum int
+);
+
+create table goods(
+ goods_id int,
+ name varchar(50),
+ price decimal(5,2),
+ stock int,
+ description varchar(100)
+);
+
+insert into book(book_id,name,writer,price,kind) values
+(1,'Java核心技术','Cay S. Horstman',56.43,'计算机技术');
+
+insert into goods(goods_id,name,price,stock,description) values
+(1,'学生书包',18.91,101,null),
+(2,'铅笔',5.32,150,null),
+(3,'文具盒',10.34,201,null),
+(4,'海报',19.87,54,null);
+
+update book set price=61 where book_id=1;
+
+delete from goods where stock between 60 and 200;
+
+update goods set price=price+50 where stock>30;
