@@ -1,0 +1,33 @@
+create table stu_test(
+  name varchar(20) comment'学生姓名',
+  school  varchar(50) comment'学校',
+  major   varchar(50) comment'专业',
+  sex  bit,
+  dianming bit,
+  state varchar(3)
+);
+
+-- 插入单行数据
+insert into stu_test values('许馨丹','陕西科技大学','信息与计算科学',1,1,'已到');
+insert into stu_test (name,school,major,sex,dianming,state)
+values(,,,,,,,)
+-- 插入多行数据
+insert into stu_test (name,school,major,sex,dianming,state)values
+(,,,,,,,),
+(,,,,,,,);
+-- 查询数据
+select * from stu_test;
+select name,school from stu_test;
+
+create table exam_result(
+   id int,
+   name varchar(20),
+   chinese decimal(3,1),
+   math decimal(3,1),
+   english decimal(3,1)
+);
+
+insert into exam_result(id,name,chinese,math,english) values
+   (1,'lisa',99.5,89.3,99.2),
+   (2,'lili',99.3,67.7,78.4),
+    (3,'mike',66.4,66.7,88.7);
