@@ -1,0 +1,7 @@
+SHOW DATABASES;//显示数据库
+create database 数据库名称 character set utf8mb4;//直接创建 如果存在该数据库报错
+create database [IF NOT EXISTS] 数据库名称 character set utf8mb4;//如果数据库不存在 创建
+create database test character set utf8mb4;
+CREATE DATABASE [IF NOT EXISTS] db_name [create_specification [,create_specification] ...]//创建数据库
+drop database if exits test;//删除数据库如果存在
+use test;//使用数据库（出现 no database ...就是未使用）
